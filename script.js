@@ -2,18 +2,31 @@ document.addEventListener('DOMContentLoaded', () => {
     // Mobile Menu Toggle
     const menuToggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('nav');
+    const overlay = document.querySelector('.overlay');
 
-    if (menuToggle && nav) {
-        menuToggle.addEventListener('click', () => {
+    if (menuToggle && nav && overlay) {
+        const header = document.querySelector('header');
+        const toggleMenu = () => {
+            menuToggle.classList.toggle('active');
             nav.classList.toggle('active');
-            const icon = menuToggle.querySelector('i');
-            if (nav.classList.contains('active')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-            } else {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            }
+            overlay.classList.toggle('active');
+            if (header) header.classList.toggle('menu-open');
+            document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : 'auto';
+        };
+
+        menuToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleMenu();
+        });
+        overlay.addEventListener('click', toggleMenu);
+
+        // Close menu on link click
+        nav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (nav.classList.contains('active')) {
+                    toggleMenu();
+                }
+            });
         });
     }
 
@@ -189,4 +202,95 @@ if (contactForm) {
             header.style.background = '#0b132b';
         }
     });
+
+    // Initialize Swiper for Recent Buys
+    if (document.querySelector('.buys-swiper')) {
+        new Swiper('.buys-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                },
+                1200: {
+                    slidesPerView: 4,
+                }
+            },
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+        });
+    }
+
+    // Initialize Swiper for Testimonials
+    if (document.querySelector('.testimonials-swiper')) {
+        new Swiper('.testimonials-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                }
+            },
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+        });
+    }
+
+    // Initialize AOS
+    if (typeof AOS !== 'undefined') {
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 20,
+            disable: false,
+            startEvent: 'DOMContentLoaded'
+        });
+
+        // Agresywne wymuszanie widoczności dla elementów w viewporcie
+        // Szczególnie ważne na mobile, gdzie AOS czasem "zasypia"
+        const triggerAOS = () => {
+            AOS.refresh();
+            const scrollPos = window.pageYOffset + window.innerHeight;
+            document.querySelectorAll('[data-aos]:not(.aos-animate)').forEach(el => {
+                // Jeśli góra elementu jest w widocznym obszarze (z zapasem 100px)
+                if (el.getBoundingClientRect().top < window.innerHeight + 100) {
+                    el.classList.add('aos-animate');
+                }
+            });
+        };
+
+        // Odświeżaj przy różnych okazjach
+        window.addEventListener('load', triggerAOS);
+        window.addEventListener('scroll', triggerAOS, { passive: true });
+        window.addEventListener('touchstart', triggerAOS, { passive: true });
+
+        // Wykonaj kilka razy po załadowaniu
+        [200, 500, 1000, 2000].forEach(delay => {
+            setTimeout(triggerAOS, delay);
+        });
+    }
 });
