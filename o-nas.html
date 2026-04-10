@@ -14,6 +14,8 @@
     <noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet"></noscript>
     <link rel="stylesheet" href="font-awesome.min.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="font-awesome.min.css"></noscript>
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- NOWE -->
     <link rel="preload" as="image" href="tlo.webp" fetchpriority="high" type="image/webp">
 
@@ -64,11 +66,14 @@
                     </a>
                 </div>
                 <div class="menu-toggle">
-                    <i class="fas fa-bars"></i>
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </div>
         </div>
     </header>
+    <div class="overlay"></div>
 
     <section class="page-header" style="background: linear-gradient(rgba(11, 19, 43, 0.8), rgba(11, 19, 43, 0.8)), url('');">
         <div class="container">
@@ -79,22 +84,22 @@
     <section class="about-content">
         <div class="container">
             <div class="about-grid">
-                <div class="about-text">
+                <div class="about-text" data-aos="fade-right">
                     <h3>PROFESJONALIZM I DOŚWIADCZENIE</h3>
                     <p>Firma DAWDAN-CARS świadczy profesjonalne usługi skupu samochodów oraz pomocy drogowej na terenie Częstochowy, Śląska i okolic. Naszym priorytetem jest zadowolenie klienta oraz szybkość działania.</p>
                     <p>Nasz zespół składa się z wykwalifikowanych specjalistów, którzy dbają o to, aby każda usługa była wykonana na najwyższym poziomie, przy zachowaniu wszelkich zasad bezpieczeństwa.</p>
                     <p>Stawiamy na uczciwość – oferujemy rzetelne wyceny i natychmiastową płatność gotówką. Działamy 24/7, bo wiemy, że pomoc może być potrzebna w każdej chwili.</p>
                 </div>
                 <div class="about-stats">
-                    <div class="stat-item">
+                    <div class="stat-item" data-aos="zoom-in" data-aos-delay="100">
                         <strong>10k+</strong>
                         <span>Zadowolonych klientów</span>
                     </div>
-                    <div class="stat-item">
+                    <div class="stat-item" data-aos="zoom-in" data-aos-delay="200">
                         <strong>15min</strong>
                         <span>Średni czas dojazdu</span>
                     </div>
-                    <div class="stat-item">
+                    <div class="stat-item" data-aos="zoom-in" data-aos-delay="300">
                         <strong>24/7</strong>
                         <span>Dostępność usług</span>
                     </div>
@@ -131,6 +136,8 @@
         </div>
     </footer>
 
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

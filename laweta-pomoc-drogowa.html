@@ -14,6 +14,8 @@
     <noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet"></noscript>
     <link rel="stylesheet" href="font-awesome.min.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="font-awesome.min.css"></noscript>
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- NOWE -->
     <link rel="preload" as="image" href="tlo.webp" fetchpriority="high" type="image/webp">
 
@@ -64,11 +66,14 @@
                     </a>
                 </div>
                 <div class="menu-toggle">
-                    <i class="fas fa-bars"></i>
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </div>
         </div>
     </header>
+    <div class="overlay"></div>
 
     <section class="page-header" style="background: linear-gradient(rgba(11, 19, 43, 0.8), rgba(11, 19, 43, 0.8)), url('');">
         <div class="container">
@@ -79,29 +84,29 @@
     <section class="tow-details">
         <div class="container">
             <div class="tow-grid">
-                <div class="tow-info">
+                <div class="tow-info" data-aos="fade-right">
                     <h3>Pomoc Drogowa / Usługi Lawetą</h3>
                     <p>Oferujemy profesjonalne usługi pomocy drogowej oraz usługi lawetą na terenie Częstochowy i okolic. Nasza firma dysponuje nowoczesnym sprzętem oraz wykwalifikowanym zespołem, który jest gotowy do działania 24/7. Gwarantujemy szybki czas reakcji oraz bezpieczeństwo Twojego pojazdu. Niezależnie od sytuacji, zapewniamy kompleksową obsługę, abyś mógł wrócić na drogę w jak najkrótszym czasie. Skontaktuj się z nami, a pomożemy Ci w każdej awaryjnej sytuacji.</p>
                     <h3>jesteśmy po to by Ci pomóc</h3>
                     <p>Niezależnie od tego, czy potrzebujesz pomocy po awarii, wypadku czy po prostu transportu swojego pojazdu, jesteśmy tutaj, aby Ci pomóc!! Współpraca z serwisem opon, serwisem blacharsko-lakierniczym i mechanikiem to idealne rozwiązanie dla kompleksowej obsługi.</p>
                 </div>
                 <div class="tow-services-grid">
-                        <div class="tow-service-item">
+                        <div class="tow-service-item" data-aos="zoom-in" data-aos-delay="100">
                             <i class="fas fa-truck-moving"></i>
                             <h4>Usługi Lawetą 24h</h4>
                             <p>Szybki i bezpieczny transport pojazdów.</p>
                         </div>
-                        <div class="tow-service-item">
+                        <div class="tow-service-item" data-aos="zoom-in" data-aos-delay="200">
                             <i class="fas fa-battery-full"></i>
                             <h4>Odpalanie Samochodów</h4>
                             <p>Pomoc przy rozładowanym akumulatorze.</p>
                         </div>
-                        <div class="tow-service-item">
+                        <div class="tow-service-item" data-aos="zoom-in" data-aos-delay="300">
                             <i class="fas fa-gas-pump"></i>
                             <h4>Dowóz Paliwa</h4>
                             <p>Paliwo prosto na miejsce Twojego postoju.</p>
                         </div>
-                        <div class="tow-service-item">
+                        <div class="tow-service-item" data-aos="zoom-in" data-aos-delay="400">
                             <i class="fas fa-wrench"></i>
                             <h4>Pomoc Drogowa</h4>
                             <p>Kompleksowe wsparcie w każdej sytuacji.</p>
@@ -139,6 +144,8 @@
         </div>
     </footer>
 
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
