@@ -5,14 +5,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const overlay = document.querySelector('.overlay');
 
     if (menuToggle && nav && overlay) {
+        const header = document.querySelector('header');
         const toggleMenu = () => {
             menuToggle.classList.toggle('active');
             nav.classList.toggle('active');
             overlay.classList.toggle('active');
+            if (header) header.classList.toggle('menu-open');
             document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : 'auto';
         };
 
-        menuToggle.addEventListener('click', toggleMenu);
+        menuToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleMenu();
+        });
         overlay.addEventListener('click', toggleMenu);
 
         // Close menu on link click
