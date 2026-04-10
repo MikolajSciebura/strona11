@@ -265,7 +265,32 @@ if (contactForm) {
         AOS.init({
             duration: 800,
             once: true,
-            offset: 100
+            offset: 20,
+            disable: false,
+            startEvent: 'DOMContentLoaded'
+        });
+
+        // Agresywne wymuszanie widoczności dla elementów w viewporcie
+        // Szczególnie ważne na mobile, gdzie AOS czasem "zasypia"
+        const triggerAOS = () => {
+            AOS.refresh();
+            const scrollPos = window.pageYOffset + window.innerHeight;
+            document.querySelectorAll('[data-aos]:not(.aos-animate)').forEach(el => {
+                // Jeśli góra elementu jest w widocznym obszarze (z zapasem 100px)
+                if (el.getBoundingClientRect().top < window.innerHeight + 100) {
+                    el.classList.add('aos-animate');
+                }
+            });
+        };
+
+        // Odświeżaj przy różnych okazjach
+        window.addEventListener('load', triggerAOS);
+        window.addEventListener('scroll', triggerAOS, { passive: true });
+        window.addEventListener('touchstart', triggerAOS, { passive: true });
+
+        // Wykonaj kilka razy po załadowaniu
+        [200, 500, 1000, 2000].forEach(delay => {
+            setTimeout(triggerAOS, delay);
         });
     }
 });
