@@ -1024,7 +1024,7 @@ footer h3 {
         padding: 100px 40px;
         flex-direction: column;
         transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
-        z-index: 2100;
+        z-index: 2100; /* Extremely high to ensure it's above overlay */
         box-shadow: -15px 0 40px rgba(0,0,0,0.6);
         display: flex;
         justify-content: flex-start;
@@ -1111,7 +1111,7 @@ footer h3 {
         height: 100%;
         background: rgba(0,0,0,0.7);
         backdrop-filter: blur(4px);
-        z-index: 1500; /* Between header and content, but below nav? No, header is 2000. */
+        z-index: 1000; /* Must be lower than header, nav, and toggle */
         opacity: 0;
         visibility: hidden;
         transition: all 0.4s ease;
