@@ -39,6 +39,14 @@ header {
     top: 0;
     z-index: 2000;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    transition: padding 0.3s ease, background 0.3s ease;
+    will-change: padding, background;
+    padding: 15px 0;
+}
+
+header.scrolled {
+    padding: 5px 0;
+    background: rgba(11, 19, 43, 0.95);
 }
 
 .top-bar .container {
@@ -295,13 +303,33 @@ nav a {
     .mobile-only {
         display: flex;
     }
+    nav a {
+        font-size: 1.8rem;
+        font-family: 'Oswald', sans-serif;
+        display: block;
+        padding: 18px 0;
+        letter-spacing: 2px;
+        color: white;
+        text-transform: uppercase;
+        position: relative;
+        border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
     nav .header-cta {
         display: flex;
         flex-direction: column;
         gap: 15px;
-        margin-top: 30px;
+        margin-top: 40px;
         width: 100%;
-        max-width: 320px;
+        max-width: 360px;
+    }
+    nav .header-cta .btn-call {
+        padding: 12px 20px;
+    }
+    nav .header-cta .btn-label {
+        font-size: 0.85rem;
+    }
+    nav .header-cta .btn-number {
+        font-size: 1.3rem;
     }
     .header-cta {
         display: none;
