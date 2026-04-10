@@ -1,0 +1,71 @@
+ INFO  Accepting connections at http://localhost:8081
+ HTTP  4/10/2026 12:57:50 PM ::1 HEAD /
+ HTTP  4/10/2026 12:57:50 PM ::1 Returned 200 in 452 ms
+ HTTP  4/10/2026 12:57:53 PM ::1 GET /
+ HTTP  4/10/2026 12:57:53 PM ::1 Returned 200 in 14 ms
+ HTTP  4/10/2026 12:57:53 PM ::1 GET /critical.css
+ HTTP  4/10/2026 12:57:53 PM ::1 Returned 200 in 3 ms
+ HTTP  4/10/2026 12:57:53 PM ::1 GET /style.css
+ HTTP  4/10/2026 12:57:53 PM ::1 GET /tlo.webp
+ HTTP  4/10/2026 12:57:53 PM ::1 GET /logo.webp
+ HTTP  4/10/2026 12:57:53 PM ::1 Returned 200 in 20 ms
+ HTTP  4/10/2026 12:57:53 PM ::1 Returned 200 in 33 ms
+ HTTP  4/10/2026 12:57:53 PM ::1 GET /script.js
+ HTTP  4/10/2026 12:57:53 PM ::1 Returned 200 in 41 ms
+ HTTP  4/10/2026 12:57:53 PM ::1 GET /font-awesome.min.css
+ HTTP  4/10/2026 12:57:53 PM ::1 Returned 200 in 12 ms
+ HTTP  4/10/2026 12:57:53 PM ::1 Returned 200 in 10 ms
+ HTTP  4/10/2026 12:57:53 PM ::1 GET /webfonts/fa-solid-900.woff2
+ HTTP  4/10/2026 12:57:53 PM ::1 GET /webfonts/fa-regular-400.woff2
+ HTTP  4/10/2026 12:57:53 PM ::1 Returned 200 in 4 ms
+ HTTP  4/10/2026 12:57:53 PM ::1 Returned 200 in 9 ms
+ HTTP  4/10/2026 12:58:22 PM ::1 GET /
+ HTTP  4/10/2026 12:58:22 PM ::1 Returned 200 in 3 ms
+ HTTP  4/10/2026 12:58:22 PM ::1 GET /critical.css
+ HTTP  4/10/2026 12:58:22 PM ::1 Returned 200 in 3 ms
+ HTTP  4/10/2026 12:58:22 PM ::1 GET /style.css
+ HTTP  4/10/2026 12:58:22 PM ::1 Returned 200 in 2 ms
+ HTTP  4/10/2026 12:58:22 PM ::1 GET /tlo.webp
+ HTTP  4/10/2026 12:58:22 PM ::1 GET /logo.webp
+ HTTP  4/10/2026 12:58:22 PM ::1 Returned 200 in 2 ms
+ HTTP  4/10/2026 12:58:22 PM ::1 GET /script.js
+ HTTP  4/10/2026 12:58:22 PM ::1 GET /font-awesome.min.css
+ HTTP  4/10/2026 12:58:22 PM ::1 Returned 200 in 3 ms
+ HTTP  4/10/2026 12:58:22 PM ::1 Returned 200 in 2 ms
+ HTTP  4/10/2026 12:58:22 PM ::1 Returned 200 in 3 ms
+ HTTP  4/10/2026 12:58:22 PM ::1 GET /webfonts/fa-solid-900.woff2
+ HTTP  4/10/2026 12:58:22 PM ::1 Returned 200 in 3 ms
+ HTTP  4/10/2026 12:58:22 PM ::1 GET /webfonts/fa-regular-400.woff2
+ HTTP  4/10/2026 12:58:22 PM ::1 Returned 200 in 2 ms
+ HTTP  4/10/2026 12:59:16 PM ::1 GET /
+ HTTP  4/10/2026 12:59:16 PM ::1 Returned 200 in 4 ms
+ HTTP  4/10/2026 12:59:16 PM ::1 GET /critical.css
+ HTTP  4/10/2026 12:59:16 PM ::1 Returned 200 in 3 ms
+ HTTP  4/10/2026 12:59:16 PM ::1 GET /style.css
+ HTTP  4/10/2026 12:59:16 PM ::1 GET /tlo.webp
+ HTTP  4/10/2026 12:59:16 PM ::1 GET /logo.webp
+ HTTP  4/10/2026 12:59:16 PM ::1 Returned 200 in 5 ms
+ HTTP  4/10/2026 12:59:16 PM ::1 Returned 200 in 5 ms
+ HTTP  4/10/2026 12:59:16 PM ::1 Returned 200 in 5 ms
+ HTTP  4/10/2026 12:59:16 PM ::1 GET /script.js
+ HTTP  4/10/2026 12:59:16 PM ::1 GET /font-awesome.min.css
+ HTTP  4/10/2026 12:59:16 PM ::1 Returned 200 in 7 ms
+ HTTP  4/10/2026 12:59:16 PM ::1 Returned 200 in 3 ms
+ HTTP  4/10/2026 12:59:17 PM ::1 GET /webfonts/fa-solid-900.woff2
+ HTTP  4/10/2026 12:59:17 PM ::1 Returned 200 in 5 ms
+ HTTP  4/10/2026 12:59:17 PM ::1 GET /webfonts/fa-regular-400.woff2
+ HTTP  4/10/2026 12:59:17 PM ::1 Returned 200 in 2 ms
+ HTTP  4/10/2026 12:59:20 PM ::1 GET /
+ HTTP  4/10/2026 12:59:20 PM ::1 Returned 304 in 3 ms
+ HTTP  4/10/2026 12:59:20 PM ::1 GET /critical.css
+ HTTP  4/10/2026 12:59:20 PM ::1 GET /style.css
+ HTTP  4/10/2026 12:59:20 PM ::1 GET /tlo.webp
+ HTTP  4/10/2026 12:59:20 PM ::1 GET /logo.webp
+ HTTP  4/10/2026 12:59:20 PM ::1 Returned 304 in 10 ms
+ HTTP  4/10/2026 12:59:20 PM ::1 Returned 304 in 10 ms
+ HTTP  4/10/2026 12:59:20 PM ::1 Returned 304 in 10 ms
+ HTTP  4/10/2026 12:59:20 PM ::1 GET /script.js
+ HTTP  4/10/2026 12:59:20 PM ::1 Returned 304 in 16 ms
+ HTTP  4/10/2026 12:59:20 PM ::1 GET /font-awesome.min.css
+ HTTP  4/10/2026 12:59:20 PM ::1 Returned 304 in 11 ms
+ HTTP  4/10/2026 12:59:20 PM ::1 Returned 304 in 9 ms

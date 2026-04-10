@@ -42,8 +42,8 @@ header {
 }
 
 .top-bar .container {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
     height: auto;
     max-width: 100%;
@@ -95,7 +95,10 @@ nav a {
     justify-content: flex-end;
     align-items: center;
     gap: 10px;
-    flex: 0 1 auto;
+}
+
+.mobile-only {
+    display: none;
 }
 
 .header-cta .btn-call {
@@ -281,6 +284,16 @@ nav a {
     }
     .top-bar .container {
         padding: 10px 15px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .desktop-only {
+        display: none;
+    }
+
+    .mobile-only {
+        display: flex;
     }
     nav .header-cta {
         display: flex;

@@ -51,8 +51,8 @@ header.menu-open {
 }
 
 .top-bar .container {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
     height: auto;
     max-width: 100%;
@@ -60,7 +60,6 @@ header.menu-open {
 }
 
 .logo {
-    flex: 0 1 auto; /* Allow logo to shrink if needed */
     display: flex;
     justify-content: flex-start;
 }
@@ -82,13 +81,12 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex: 0 0 auto;
 }
 
 nav ul {
     display: flex;
     list-style: none;
-    gap: 5px; /* Tighter gap for better fit */
+    gap: 10px; /* Slightly more space */
 }
 
 nav a {
@@ -113,7 +111,10 @@ nav a:hover, nav a.active {
     justify-content: flex-end;
     align-items: center;
     gap: 10px; /* Reduced gap */
-    flex: 0 1 auto;
+}
+
+.mobile-only {
+    display: none;
 }
 
 .header-cta .btn-call {
@@ -157,11 +158,11 @@ nav a:hover, nav a.active {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
     background: rgba(255, 152, 0, 0.1);
-    border: 1px solid var(--primary-color);
-    border-radius: 10px;
+    border: 2px solid var(--primary-color);
+    border-radius: 12px;
     cursor: pointer;
     padding: 0;
     z-index: 2200; /* Above nav */
@@ -462,6 +463,13 @@ nav a:hover, nav a.active {
 .buys-swiper .swiper-button-next,
 .buys-swiper .swiper-button-prev {
     color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .buys-swiper .swiper-button-next,
+    .buys-swiper .swiper-button-prev {
+        display: none;
+    }
 }
 
 .buys-swiper .swiper-pagination-bullet-active {
@@ -1012,6 +1020,19 @@ footer h3 {
         order: 3;
     }
 
+    .desktop-only {
+        display: none;
+    }
+
+    .mobile-only {
+        display: flex;
+    }
+
+    .top-bar .container {
+        display: flex;
+        justify-content: space-between;
+    }
+
     nav {
         position: fixed;
         top: 0;
@@ -1057,11 +1078,11 @@ footer h3 {
         transform: translateY(0);
     }
 
-    nav.active li:nth-child(1) { transition-delay: 0.2s; }
-    nav.active li:nth-child(2) { transition-delay: 0.3s; }
-    nav.active li:nth-child(3) { transition-delay: 0.4s; }
-    nav.active li:nth-child(4) { transition-delay: 0.5s; }
-    nav.active li:nth-child(5) { transition-delay: 0.6s; }
+    nav.active li:nth-child(1) { transition-delay: 0.1s; }
+    nav.active li:nth-child(2) { transition-delay: 0.15s; }
+    nav.active li:nth-child(3) { transition-delay: 0.2s; }
+    nav.active li:nth-child(4) { transition-delay: 0.25s; }
+    nav.active li:nth-child(5) { transition-delay: 0.3s; }
 
     nav a {
         font-size: 1.5rem;
@@ -1099,13 +1120,21 @@ footer h3 {
         padding: 10px 15px;
     }
 
-    nav .header-cta {
+    nav .header-cta.mobile-only {
         display: flex;
         flex-direction: column;
         gap: 15px;
         margin-top: 30px;
         width: 100%;
         max-width: 320px;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.4s ease 0.4s;
+    }
+
+    nav.active .header-cta.mobile-only {
+        opacity: 1;
+        transform: translateY(0);
     }
 
     .header-cta {
