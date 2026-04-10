@@ -304,10 +304,10 @@ nav a {
         display: flex;
     }
     nav a {
-        font-size: 1.8rem;
+        font-size: 1.25rem;
         font-family: 'Oswald', sans-serif;
         display: block;
-        padding: 18px 0;
+        padding: 12px 0;
         letter-spacing: 2px;
         color: white;
         text-transform: uppercase;
@@ -323,13 +323,15 @@ nav a {
         max-width: 360px;
     }
     nav .header-cta .btn-call {
-        padding: 12px 20px;
+        padding: 15px 25px;
+        width: 100%;
+        justify-content: center;
     }
     nav .header-cta .btn-label {
-        font-size: 0.85rem;
+        font-size: 1.1rem;
     }
     nav .header-cta .btn-number {
-        font-size: 1.3rem;
+        font-size: 1.8rem;
     }
     .header-cta {
         display: none;

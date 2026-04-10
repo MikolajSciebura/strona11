@@ -1097,10 +1097,10 @@ footer h3 {
     nav.active li:nth-child(5) { transition-delay: 0.3s; }
 
     nav a {
-        font-size: 1.8rem;
+        font-size: 1.25rem;
         font-family: 'Oswald', sans-serif;
         display: block;
-        padding: 18px 0;
+        padding: 12px 0;
         letter-spacing: 2px;
         color: white;
         text-transform: uppercase;
@@ -1145,15 +1145,17 @@ footer h3 {
     }
 
     nav .header-cta.mobile-only .btn-call {
-        padding: 12px 20px;
+        padding: 15px 25px;
+        width: 100%;
+        justify-content: center;
     }
 
     nav .header-cta.mobile-only .btn-label {
-        font-size: 0.85rem;
+        font-size: 1.1rem;
     }
 
     nav .header-cta.mobile-only .btn-number {
-        font-size: 1.3rem;
+        font-size: 1.8rem;
     }
 
     nav.active .header-cta.mobile-only {
