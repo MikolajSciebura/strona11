@@ -1099,9 +1099,17 @@ footer h3 {
         padding: 10px 15px;
     }
 
+    nav .header-cta {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 30px;
+        width: 100%;
+        max-width: 320px;
+    }
+
     .header-cta {
-        order: 2;
-        margin-right: 10px;
+        display: none;
     }
 
     .overlay {
@@ -1133,48 +1141,18 @@ footer h3 {
 @media (max-width: 768px) {
     .top-bar .container {
         height: auto;
-        min-height: 80px;
-        flex-wrap: wrap;
+        min-height: 70px;
+        flex-wrap: nowrap;
         justify-content: space-between;
-        padding: 10px 15px;
-        gap: 15px;
+        padding: 10px 20px;
+        gap: 10px;
     }
 
     .logo img {
-        max-height: 100px; /* Even larger as requested */
-    }
-
-    .header-cta {
-        display: flex;
-        flex-direction: row; /* Keep side-by-side on mobile */
+        max-height: 50px;
         width: auto;
-        order: 2;
-        margin-left: 0;
-        gap: 6px;
-        flex: 0 0 auto;
     }
 
-    .header-cta .btn-call {
-        padding: 5px 10px;
-        flex-direction: row;
-        align-items: center;
-        gap: 8px;
-        width: auto;
-        justify-content: flex-start;
-    }
-
-    .header-cta .btn-call i {
-        display: inline-block;
-        font-size: 0.9rem;
-    }
-
-    .header-cta .btn-number {
-        font-size: 0.9rem;
-    }
-
-    .header-cta .btn-label {
-        font-size: 0.65rem;
-    }
 
     .menu-toggle {
         display: flex;

@@ -282,9 +282,16 @@ nav a {
     .top-bar .container {
         padding: 10px 15px;
     }
+    nav .header-cta {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 30px;
+        width: 100%;
+        max-width: 320px;
+    }
     .header-cta {
-        order: 2;
-        margin-right: 15px;
+        display: none;
     }
     .overlay {
         position: fixed;
@@ -306,7 +313,7 @@ nav a {
 
 @media (max-width: 768px) {
     .logo img {
-        max-height: 100px;
+        max-height: 50px;
     }
     .hero {
         padding: 40px 0;
